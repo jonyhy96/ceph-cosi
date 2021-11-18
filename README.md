@@ -76,7 +76,7 @@ spec:
         bar-name: sample-bar
         bar-namespace: default
 ```
-An example for awscli pods can be found at `examples/awscliapppod.yaml`
+An example for awscli pods can be found at `examples/mc.yaml`
 
 ## Known limitations
 1. Deletion of Bucket Access Request not supported

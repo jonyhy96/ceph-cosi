@@ -1,12 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: awscli
+  name: mc
 spec:
   containers:
-    - name: awscli
-      # TODO: Replace the image with an official one once Amazon  publishes theirs
-      image: mikesir87/aws-cli:1.16.220
+    - name: mc
+      image: minio/mc
+      command:
+      - sleep
+      args:
+      - "9999"
       stdin: true
       tty: true
       volumeMounts:
