@@ -89,6 +89,8 @@ func (s *ProvisionerServer) ProvisionerDeleteBucket(ctx context.Context,
 
 func (s *ProvisionerServer) ProvisionerGrantBucketAccess(ctx context.Context,
 	req *cosi.ProvisionerGrantBucketAccessRequest) (*cosi.ProvisionerGrantBucketAccessResponse, error) {
+	klog.InfoS("Start grant Bucket access logic", "req", req)
+
 	// TODO : validate below details, if accountname is empty create internal user
 	userName := req.GetAccountName()
 	bucketName := req.GetBucketId()
